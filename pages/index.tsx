@@ -41,8 +41,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{" "}
-          <span className={styles.logo}>Cleber Pereira da Silva</span>
+          Powered by <span className={styles.logo}>Cleber Silva</span>
         </a>
       </footer>
     </div>
