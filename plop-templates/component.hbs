@@ -1,10 +1,21 @@
-import React from 'react';
-import * as Styled from './style'
+import React, { useState } from "react"
+import * as Styled from "./style"
 
-export const {{pascalCase name}} = props => {
+export const {{pascalCase name}} = () => {
+  const [message, setMessage] = useState("")
   return (
-    <Styled.{{pascalCase name}}>
-      {{pascalCase name}}
-    </Styled.{{pascalCase name}}>
-  );
-};
+    <>
+      <Styled.{{pascalCase name}}
+        onClick={() =>
+          setMessage(
+            "Everything is perfect. Your account is ready and we should probably get you started!"
+          )
+        }
+      >
+        {{pascalCase name}}
+      </Styled.{{pascalCase name}}>
+      <br />
+      <div>{message}</div>
+    </>
+  )
+}
