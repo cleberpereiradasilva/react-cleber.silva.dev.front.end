@@ -1,6 +1,6 @@
 import { styled } from '../../stitches.config'
 
-export const {{pascalCase name}} = styled('button',{
+export const Button = styled('button',{
   "font-family": "Arial",
   "font-weight": 700,
   "border": 0,

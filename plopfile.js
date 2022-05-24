@@ -14,12 +14,12 @@ const Plop = (plop) => {
         },
         {
             type: 'add',
-            path: 'components/{{pascalCase name}}/{{name}}.spec.ts',
+            path: 'components/{{pascalCase name}}/__tests__/{{name}}.spec.tsx',
             templateFile: 'plop-templates/component.spec.hbs'
         },
         {
             type: 'add',
-            path: 'components/{{pascalCase name}}/{{name}}.stories.tsx',
+            path: 'components/{{pascalCase name}}/stories/{{name}}.stories.tsx',
             templateFile: 'plop-templates/component.stories.hbs'
         },
         {
