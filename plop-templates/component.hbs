@@ -1,18 +1,19 @@
 import React, { useState } from "react"
 import * as Styled from "./style"
 
-export const {{pascalCase name}} = () => {
+export const {{pascalCase name}} = ({ children, dataTestid }) => {
   const [message, setMessage] = useState("")
   return (
     <>
       <Styled.{{pascalCase name}}
+      data-testid={`${dataTestid || ""}`}
         onClick={() =>
           setMessage(
             "Everything is perfect. Your account is ready and we should probably get you started!"
           )
         }
       >
-        {{pascalCase name}}
+        {children}
       </Styled.{{pascalCase name}}>
       <br />
       <div>{message}</div>
