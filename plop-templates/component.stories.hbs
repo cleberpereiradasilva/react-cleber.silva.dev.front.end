@@ -2,40 +2,76 @@ import { expect } from "@storybook/jest"
 import { ComponentMeta, ComponentStory } from "@storybook/react"
 import { userEvent, within } from "@storybook/testing-library"
 import React from "react"
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
+import { darcula } from "react-syntax-highlighter/dist/esm/styles/prism"
+import { Copy } from "../../../.storybook-helpers"
+import * as Styled from "../../../.storybook-helpers/style"
+import generateSource from "../../../.storybook/generateSource"
 import { {{pascalCase name}} } from "../{{pascalCase name}}"
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: "{{pascalCase name}}/{{pascalCase name}}",
   component: {{pascalCase name}},
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    backgroundColor: { control: "color" },
+    dataTestid: {
+      type: "string",
+      table: {
+        disable: true,
+      },
+    },
   },
+  decorators: [
+    (Story, { args }) => {
+      const TheStory = Story()
+      const name: string = TheStory.type
+        .toString()
+        .split("(")[0]
+        .replace("function ", "")
+      const source = generateSource(name, args)
+      return (
+        <>
+          <Styled.Panel>{TheStory}</Styled.Panel>
+          <Styled.Source>
+            <SyntaxHighlighter
+              language="javascript"
+              style={darcula}
+              showLineNumbers={true}
+              wrapLines={true}
+            >
+             {`import { {{pascalCase name}} } from './components/{{pascalCase name}}' \n\n${source}`}
+            </SyntaxHighlighter>
+            <Copy value={source} />
+          </Styled.Source>
+        </>
+      )
+    },
+  ],
 } as ComponentMeta<typeof {{pascalCase name}}>
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof {{pascalCase name}}> = (args) => <{{pascalCase name}} {...args} />
+const Template: ComponentStory<typeof {{pascalCase name}}> = (args) => (
+  <{{pascalCase name}} {...args}>{args.children}</{{pascalCase name}}>
+)
 
 export const Primary = Template.bind({})
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
   primary: true,
-  label: "{{pascalCase name}}",
+  children: "More Details",
+  dataTestid: "item-test-id",
 }
 
 export const Secondary = Template.bind({})
 Secondary.args = {
-  label: "{{pascalCase name}}",
+  children: "More Details",
+  dataTestid: "item-test-id",
 }
-
 
 Primary.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement)
-  await userEvent.click(canvas.getByRole("button"))
+  await userEvent.click(canvas.getByTestId("item-test-id"))
   await expect(
     canvas.getByText(
       "Everything is perfect. Your account is ready and we should probably get you started!"
     )
   ).toBeInTheDocument()
 }
+
