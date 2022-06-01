@@ -5,7 +5,13 @@ export const { getCssText } = createStitches();
 export const { styled, css } = createStitches(main);
 
 const globalStyles = globalCss({
-    '*': { margin: 0, padding: 0, fontFamily: main.theme.fonts.mono },
+    '@font-face': {
+      fontFamily: 'PingFang SC Regular',
+      src: `local(
+        './assets/fonts/pingfang-sc/PingFang SC Regular.ttf'), 
+        url('./assets/fonts/pingfang-sc/PingFang SC Regular.woff')`,
+    },
+    '*': { margin: 0, padding: 0, fontFamily: '$primary' },
     a: { textDecoration: 'none' }, 
     
   });
