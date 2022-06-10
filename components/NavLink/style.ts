@@ -4,7 +4,7 @@ export const Span = styled('span',{
   fontWeight: "$600",
   color: "$primary",
   lineHeight: "$3",
-  fontSize: "$3",
+  fontSize: "$4",
   padding: "$2 $5"
 })
 
