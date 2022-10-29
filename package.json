@@ -12,7 +12,7 @@
     "eslint": "eslint --ext=.tsx,.ts,.jsx  --max-warnings=0",
     "test": "jest -o --passWithNoTests --coverage",
     "test:ci": "jest --passWithNoTests --no-coverage",
-    "storybook": "start-storybook -p 6006",
+    "sb": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "lint-staged": {
