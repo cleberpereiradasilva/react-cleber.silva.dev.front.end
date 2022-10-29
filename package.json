@@ -8,10 +8,11 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install", 
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged", 
+    "eslint": "eslint --ext=.tsx,.ts,.jsx  --max-warnings=0"
   },
   "lint-staged": {
-    "src/**/*.ts|tsx": "eslint --ext=.tsx,.ts,.jsx  --max-warnings=0"
+    "src/**/*.ts|tsx|jsx": "eslint --ext=.tsx,.ts,.jsx  --max-warnings=0"
   },
   "dependencies": {
     "next": "13.0.0",
