@@ -3,7 +3,7 @@ import { Button } from "../";
 
 describe('First test', () => {
     it('should exist', () => {
-        const {getByText} = render(<Button />)
+        const {getByText} = render(<Button>Funcionou</Button>)
         expect(getByText(/Funcionou/)).toBeTruthy()
     });    
 });
