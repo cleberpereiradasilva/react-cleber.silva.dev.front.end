@@ -11,7 +11,7 @@
     "lint-staged": "lint-staged"
   },
   "lint-staged": {
-    "src/**/*.ts|tsx": "eslint --ext=.tsx,.ts  --max-warnings=0"
+    "src/**/*.ts|tsx": "eslint --ext=.tsx,.ts,.jsx  --max-warnings=0"
   },
   "dependencies": {
     "next": "13.0.0",
