@@ -1,1 +1,1 @@
-export const notUsed = "asdfasd"
+export * from './button'

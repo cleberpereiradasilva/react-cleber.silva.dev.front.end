@@ -10,7 +10,7 @@
     "prepare": "husky install",
     "lint-staged": "lint-staged",
     "eslint": "eslint --ext=.tsx,.ts,.jsx  --max-warnings=0",
-    "test": "jest -o --passWithNoTests --coverage",
+    "test": "jest --coverage --passWithNoTests",
     "test:ci": "jest --passWithNoTests --no-coverage",
     "sb": "start-storybook -p 6006",
     "build-storybook": "build-storybook"

@@ -4,16 +4,18 @@ import nextJest from 'next/jest'
 const createJestConfig = nextJest({
   // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
   dir: './',
-  
 })
 
 // Add any custom config to be passed to Jest
 /** @type {import('jest').Config} */
 const customJestConfig = {
   collectCoverageFrom: [
-    '**/*.{js,jsx, ts, tsx}',
+    '<rootDir>/src/**/*.{js,jsx,ts,tsx}',
     '!**/node_modules/**',
     '!**/vendor/**',
+    '!**/stories/*',
+    '!**/themes/*',
+    '!**/index.ts',
   ],
   modulePathIgnorePatterns: [
       '<rootDir>/build/',
