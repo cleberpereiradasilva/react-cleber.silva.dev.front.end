@@ -1,8 +1,5 @@
 import { Buttom as ButtonStyled } from "./styles"
-
-type Props = {
-    children: JSX.Element | string,
-    };
+import { Props } from "./types"
 
 export const Button = ({ children }: Props) => <ButtonStyled>{children}</ButtonStyled>
 
