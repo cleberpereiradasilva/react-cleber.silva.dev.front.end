@@ -1,0 +1,20 @@
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+
+import {  {{pascalCase name}} } from '../{{pascalCase name}}';
+
+export default {
+  title: '{{pascalCase name}}/{{pascalCase name}}',
+  component: {{pascalCase name}},
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
+} as ComponentMeta<typeof  {{pascalCase name}}>;
+
+const Template: ComponentStory<typeof  {{pascalCase name}}> = (args) => < {{pascalCase name}} {...args} />;
+
+export const Primary = Template.bind({});
+
+Primary.args = {
+  children: 'It`s all ok',
+};
+

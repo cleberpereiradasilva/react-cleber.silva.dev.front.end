@@ -1,9 +1,9 @@
 import {render} from '@testing-library/react'
-import { Button } from "..";
+import { {{pascalCase name}} } from "../{{pascalCase name}}";
 
 describe('First test', () => {
     it('should exist', () => {
-        const {getByText} = render(<Button>Funcionou</Button>)
+        const {getByText} = render(<{{pascalCase name}}>Funcionou</{{pascalCase name}}>)
         expect(getByText(/Funcionou/)).toBeTruthy()
     });    
 });
