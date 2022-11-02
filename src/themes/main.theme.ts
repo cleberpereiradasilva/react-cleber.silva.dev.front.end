@@ -7,17 +7,18 @@ export const { styled, getCssText } = createStitches({
     },
     colors: {
       default: '#303030',
+      gray: '#BBBBBB',
       linear: 'linear-gradient(270deg, #038FF4 0%, #674FFF 100%)'
     },
     fontSizes: {
       1: '13.22px',
       2: '14px',
-      3: '16x',
-      4: '18x',
-      5: '26x',
-      6: '32x',
-      7: '48x',
-      8: '60x'
+      3: '16px',
+      4: '18px',
+      5: '26px',
+      6: '32px',
+      7: '48px',
+      8: '60px'
     },
   },
 });

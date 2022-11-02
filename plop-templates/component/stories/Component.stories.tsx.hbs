@@ -5,16 +5,13 @@ import {  {{pascalCase name}} } from '../{{pascalCase name}}';
 export default {
   title: '{{pascalCase name}}/{{pascalCase name}}',
   component: {{pascalCase name}},
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
 } as ComponentMeta<typeof  {{pascalCase name}}>;
 
 const Template: ComponentStory<typeof  {{pascalCase name}}> = (args) => < {{pascalCase name}} {...args} />;
 
-export const Primary = Template.bind({});
+export const Default = Template.bind({});
 
-Primary.args = {
+Default.args = {
   children: 'It`s all ok',
 };
 
