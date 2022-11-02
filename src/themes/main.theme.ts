@@ -18,7 +18,8 @@ export const { styled, getCssText } = createStitches({
       5: '26px',
       6: '32px',
       7: '48px',
-      8: '60px'
+      8: '60px',
+      9: '66px'
     },
   },
 });

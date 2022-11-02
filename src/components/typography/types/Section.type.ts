@@ -1,3 +1,4 @@
 export type SectionProps = {
-    children: JSX.Element[]
+    children: JSX.Element[],
+    align?: 'right' | 'left',
 };
