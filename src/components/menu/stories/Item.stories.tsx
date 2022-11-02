@@ -12,9 +12,9 @@ export default {
 
 const Template: ComponentStory<typeof  Item> = (args) => < Item {...args} />;
 
-export const Primary = Template.bind({});
+export const Default = Template.bind({});
 
-Primary.args = {
+Default.args = {
   children: 'Quem sou eu',
   href:'#', 
   active: true

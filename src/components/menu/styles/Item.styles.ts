@@ -5,12 +5,17 @@ export const Item = styled('a', {
     fontSize: '$3',
     color: '$default',
 
-    margin: '0 32px 0 32px',
+    padding: '0 32px 0 32px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     textDecoration: 'none',
     height: '40px',
+    '&:focus': {
+      outline: '2px dotted',
+      borderColor: '$default',
+      borderRadius: '8px',
+    }
    
 });
 
