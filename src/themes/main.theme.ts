@@ -7,7 +7,9 @@ export const { styled, getCssText, keyframes } = createStitches({
     },
     colors: {
       default: '#303030',
+      dark: '#222222',
       gray: '#BBBBBB',
+      white: '#fff',
       linear: 'linear-gradient(270deg, #038FF4 0%, #674FFF 100%)'
     },
     fontSizes: {
