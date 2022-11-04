@@ -1,5 +1,2 @@
-export * from './Linkedin'
-export * from './Facebook'
-export * from './Twitter'
-export * from './Instagram'
-export * from './Youtube'
+export * from './Socials'
+export * from './Technologies'

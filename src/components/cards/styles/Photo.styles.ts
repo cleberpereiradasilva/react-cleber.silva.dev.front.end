@@ -1,6 +1,6 @@
 import { styled, keyframes } from 'themes';
 
-export const Slider = styled('div', {
+export const Photo = styled('div', {
     
     display: 'flex',
     width: '420px',

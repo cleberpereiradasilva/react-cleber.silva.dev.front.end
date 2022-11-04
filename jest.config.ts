@@ -16,6 +16,7 @@ const customJestConfig = {
     '!**/stories/*',
     '!**/themes/*',
     '!**/index.ts',
+    '!<rootDir>/src/components/icons/Technologies/*',
   ],
   modulePathIgnorePatterns: [
       '<rootDir>/build/',

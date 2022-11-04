@@ -1,13 +1,13 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import {  Slider } from '../Slider';
+import {  Photo } from '../Photo';
 
 export default {
-  title: 'Slider/Slider',
-  component: Slider,
-} as ComponentMeta<typeof  Slider>;
+  title: 'Cards/Photo',
+  component: Photo,
+} as ComponentMeta<typeof  Photo>;
 
-const Template: ComponentStory<typeof  Slider> = (args) => < Slider {...args} />;
+const Template: ComponentStory<typeof  Photo> = (args) => < Photo {...args} />;
 
 export const Default = Template.bind({});
 

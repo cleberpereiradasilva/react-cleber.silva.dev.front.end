@@ -1,5 +1,5 @@
 import {render} from '@testing-library/react'
-import { Slider } from "../Slider";
+import { Photo } from "../Photo";
 
 describe('First test', () => {
     it('should exist', () => {
@@ -8,7 +8,7 @@ describe('First test', () => {
             '../../photos/10.jpeg',
             '../../photos/7.jpeg',
           ]
-        const {getByTestId} = render(<Slider images={images} dataTestid = 'inside-test-id' />)
+        const {getByTestId} = render(<Photo images={images} dataTestid = 'inside-test-id' />)
         expect(getByTestId('inside-test-id').querySelectorAll('div').length).toEqual(images.length + 1)
         
     });    

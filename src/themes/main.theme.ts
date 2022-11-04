@@ -10,7 +10,8 @@ export const { styled, getCssText, keyframes } = createStitches({
       dark: '#222222',
       gray: '#BBBBBB',
       white: '#fff',
-      linear: 'linear-gradient(270deg, #038FF4 0%, #674FFF 100%)'
+      background: '#F1F7FF',
+      linear: 'linear-gradient(270deg, #038FF4 0%, #674FFF 100%)',
     },
     fontSizes: {
       1: '13.22px',

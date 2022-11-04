@@ -1,4 +1,4 @@
-export type SliderProps = {
+export type PhotoProps = {
     images: string[],
     dataTestid?: string
 };

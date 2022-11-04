@@ -1,8 +1,8 @@
 import { styled } from 'themes';
-import { Slider as SliderStyled, Inside, Slide } from "./styles"
-import { SliderProps } from "./types"
+import { Photo as PhotoStyled, Inside, Slide } from "./styles"
+import { PhotoProps } from "./types"
 
-export const Slider = ({images, dataTestid} : SliderProps) => {
+export const Photo = ({images, dataTestid} : PhotoProps) => {
     
     const ImageZero = styled(Slide, {
         backgroundImage: `url(${images[0]})`,
@@ -11,7 +11,7 @@ export const Slider = ({images, dataTestid} : SliderProps) => {
     })
 
     return (
-        <SliderStyled>
+        <PhotoStyled>
             <Inside data-testid={dataTestid}>
                 <ImageZero />
                 {
@@ -24,7 +24,7 @@ export const Slider = ({images, dataTestid} : SliderProps) => {
                     })
                 }               
             </Inside>
-        </SliderStyled>
+        </PhotoStyled>
     )
 }
 
