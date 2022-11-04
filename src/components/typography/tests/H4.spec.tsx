@@ -1,9 +1,9 @@
 import {render} from '@testing-library/react'
-import { H2 } from "../H2";
+import { H4 } from "../H4";
 
 describe('First test', () => {
     it('should exist', () => {
-        const {getByText} = render(<H2>Funcionou</H2>)
+        const {getByText} = render(<H4>Funcionou</H4>)
         expect(getByText(/Funcionou/)).toBeTruthy()
     });    
 });

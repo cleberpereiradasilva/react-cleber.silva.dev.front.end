@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { H2 } from '../H2';
+import { H4 } from '../H4';
 
 import {  Section } from '../Section';
 import { Text } from '../Text';
@@ -20,7 +20,7 @@ export const Default = Template.bind({});
 Default.args = {
   align: 'left', 
   children: [
-    <H2>Quem?</H2>,
+    <H4>Quem?</H4>,
     <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est tempor, ipsum eget sit. Semper phasellus non varius et </Text>
   ]
 };
@@ -30,8 +30,8 @@ BigNumber.args = {
   align: 'right', 
   
   children: [
-    <H2>Clientes</H2>,
-    <H2>Atendidos</H2>,
+    <H4>Clientes</H4>,
+    <H4>Atendidos</H4>,
     <Text size ='big'>8</Text>
   ]
 };
