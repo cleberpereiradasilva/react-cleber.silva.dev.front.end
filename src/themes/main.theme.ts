@@ -13,6 +13,7 @@ export const { styled, getCssText, keyframes } = createStitches({
       title: '#414141',
       subtitle: '#414141',
       background: '#F1F7FF',
+      separator: '#23292D',
       linear: 'linear-gradient(270deg, #038FF4 0%, #674FFF 100%)',
     },
     fontSizes: {
