@@ -6,8 +6,8 @@ export const H1 = styled('h1', {
     fontStyle: 'normal',
     fontWeight: '600',
     letterSpacing: '0.002em', 
-    lineHeight: '$7',
-    fontSize: '$7',
+    lineHeight: '$8',
+    fontSize: '$8',
     color: '$default',
     '> p strong':{
       backgroundImage: 'linear-gradient(339.21deg, #038FF4 9.58%, #674FFF 89.92%), linear-gradient(0deg, #303030, #303030)',

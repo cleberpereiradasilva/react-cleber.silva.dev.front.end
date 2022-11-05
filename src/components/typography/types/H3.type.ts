@@ -1,3 +1,3 @@
-export type H4Props = {
+export type H3Props = {
     children: string,
 };

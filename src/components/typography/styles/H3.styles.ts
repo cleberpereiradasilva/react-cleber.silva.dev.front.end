@@ -1,5 +1,5 @@
 import { styled } from 'themes';
-export const H4 = styled('h4', {
+export const H3 = styled('h4', {
     textTransform: 'Uppercase',
     fontFamily: '$system',
     fontStyle: 'normal',

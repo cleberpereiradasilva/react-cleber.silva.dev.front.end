@@ -10,6 +10,8 @@ export const { styled, getCssText, keyframes } = createStitches({
       dark: '#222222',
       gray: '#BBBBBB',
       white: '#fff',
+      title: '#414141',
+      subtitle: '#414141',
       background: '#F1F7FF',
       linear: 'linear-gradient(270deg, #038FF4 0%, #674FFF 100%)',
     },
@@ -18,11 +20,12 @@ export const { styled, getCssText, keyframes } = createStitches({
       2: '14px',
       3: '16px',
       4: '18px',
-      5: '26px',
-      6: '32px',
-      7: '48px',
-      8: '60px',
-      9: '66px'
+      5: '20px',
+      6: '26px',
+      7: '32px',
+      8: '48px',
+      9: '60px',
+      10: '66px'
     },
   },
 });
