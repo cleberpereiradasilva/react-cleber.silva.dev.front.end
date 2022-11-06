@@ -28,5 +28,10 @@ export const { styled, getCssText, keyframes } = createStitches({
       9: '60px',
       10: '66px'
     },
+    media: {
+      bp1: '(min-width: 640px)',
+      bp2: '(min-width: 768px)',
+      bp3: '(min-width: 1024px)',
+    },
   },
 });

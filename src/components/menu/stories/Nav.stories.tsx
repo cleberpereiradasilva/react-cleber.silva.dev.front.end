@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Item, Nav } from '../';
 
 export default {
-  title: 'Nav/Nav',
+  title: 'Menu/Nav',
   component: Nav,
   argTypes: {
     children: {
