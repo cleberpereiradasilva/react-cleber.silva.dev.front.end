@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "PingFang";
+  src: url('../public/fonts/PingFang SC Regular.eot'),
+    url('../public/fonts/PingFang SC Regular.eot?#') format('embedded-opentype'),
+    url('../public/fonts/PingFang SC Regular.woff') format('woff'),
+    url('../public/fonts/PingFang SC Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
   padding: 0;
@@ -13,4 +23,15 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
 }

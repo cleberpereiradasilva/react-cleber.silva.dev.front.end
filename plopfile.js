@@ -1,39 +1,53 @@
-
-const Plop = (plop) => {
+module.exports = plop => {
+    // controller generator
     plop.setGenerator('component', {
-        description: 'application component logic',
+        description: 'new component',
         prompts: [{
             type: 'input',
             name: 'name',
-            message: 'component name please'
+            message: 'Component name please: '
         }],
-        actions: [{
-            type: 'add',
-            path: 'components/{{pascalCase name}}/{{pascalCase name}}.tsx',
-            templateFile: 'plop-templates/component.hbs'
-        },
-        {
-            type: 'add',
-            path: 'components/{{pascalCase name}}/__tests__/{{name}}.spec.tsx',
-            templateFile: 'plop-templates/component.spec.hbs'
-        },
-        {
-            type: 'add',
-            path: 'components/{{pascalCase name}}/stories/{{name}}.stories.tsx',
-            templateFile: 'plop-templates/component.stories.hbs'
-        },
-        {
-            type: 'add',
-            path: 'components/{{pascalCase name}}/style.ts',
-            templateFile: 'plop-templates/component.style.hbs'
-        },
-        {
-            type: 'add',
-            path: 'components/{{pascalCase name}}/index.ts',
-            templateFile: 'plop-templates/index.hbs'
-        }]
+        actions: (data) => {
+            data.parts = data.name.split('/')
+            if(data.parts.length > 1){
+                data.name = data.parts[data.parts.length -1]
+                data.path =  data.parts.slice(0,data.parts.length-1).join('/')
+            }else{
+                data.path =  data.name
+            }
+
+            return [
+                {
+                    type: 'add',
+                    path: 'src/components/{{lowerCase path}}/{{pascalCase name}}.tsx',
+                    templateFile:
+                    'plop-templates/component/Component.tsx.hbs',
+                },
+                {
+                    type: 'add',
+                    path: 'src/components/{{lowerCase path}}/stories/{{pascalCase name}}.stories.tsx',
+                    templateFile:
+                    'plop-templates/component/stories/Component.stories.tsx.hbs',
+                },
+                {
+                    type: 'add',
+                    path: 'src/components/{{lowerCase path}}/styles/{{pascalCase name}}.styles.ts',
+                    templateFile:
+                    'plop-templates/component/styles/Component.styles.ts.hbs',
+                },
+                {
+                    type: 'add',
+                    path: 'src/components/{{lowerCase path}}/tests/{{pascalCase name}}.spec.tsx',
+                    templateFile:
+                    'plop-templates/component/tests/Component.spec.tsx.hbs',
+                },
+                {
+                    type: 'add',
+                    path: 'src/components/{{lowerCase path}}/types/{{pascalCase name}}.type.ts',
+                    templateFile:
+                    'plop-templates/component/types/Component.type.ts.hbs',
+                }
+            ]
+        }
     });
-};
-
-
-module.exports = Plop
+}
