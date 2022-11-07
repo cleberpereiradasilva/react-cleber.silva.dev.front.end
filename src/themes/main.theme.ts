@@ -17,16 +17,16 @@ export const { styled, getCssText, keyframes } = createStitches({
       linear: 'linear-gradient(270deg, #038FF4 0%, #674FFF 100%)',
     },
     fontSizes: {
-      1: '13.22px',
-      2: '14px',
-      3: '16px',
-      4: '18px',
-      5: '20px',
-      6: '26px',
-      7: '32px',
-      8: '48px',
-      9: '60px',
-      10: '66px'
+      1: '0.826rem', // '13.22px',
+      2: '0.875rem', // '14px',
+      3: '1rem', // '16px',
+      4: '1.125rem', // '18px',
+      5: '1.25rem', // '20px',
+      6: '1.625rem', // '26px',
+      7: '2rem', // '32px',
+      8: '3rem', // '48px',
+      9: '3.75rem', // '60px',
+      10: '4.125rem', // '66px'
     },
     media: {
       bp1: '(min-width: 640px)',

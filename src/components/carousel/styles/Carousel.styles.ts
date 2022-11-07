@@ -9,7 +9,16 @@ export const Carousel = styled('div', {
   },
   '& .slick-slider': {
     display: 'flex',
-    alignItems: 'center'  
+    alignItems: 'center',
+   
+  },
+  '& .slick-list': {
+   paddingBottom: '122px',
+  },
+  '& .slick-slide': {
+    '& > div': {
+      maxWidth: '350px',
+    } 
   }
 });
 
@@ -33,14 +42,12 @@ export const Arrow = styled('div', {
 
 
 export const Card = styled('div', {
-  width: '336px', 
+  maxWidth: '336px', 
   height: '400px',
   backgroundColor: '$white',
-  padding: '15px',
+  padding: '1px',
+  //border: '1px solid',
 })
 
-export const CardContent = styled('div', {
-  width: '100%', 
-  height: '100%',
-  backgroundColor: '#c0c0c0',
-})
+
+

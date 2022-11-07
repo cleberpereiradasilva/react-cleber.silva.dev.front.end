@@ -1,6 +1,7 @@
 export * from './H1.styles'
 export * from './H2.styles'
 export * from './H3.styles'
+export * from './H4.styles'
 export * from './Title.styles'
 export * from './Subtitle.styles'
 export * from './Text.styles'

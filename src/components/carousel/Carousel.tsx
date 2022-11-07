@@ -1,4 +1,4 @@
-import { Carousel as CarouselStyled, Card as CardStyled, CardContent, Arrow} from "./styles"
+import { Carousel as CarouselStyled, Card as CardStyled, Arrow} from "./styles"
 import { CardProps, OnClickProps, CardListProps } from "./types"
 import Slider from "react-slick";
 import { Card } from "./Card";
@@ -40,16 +40,39 @@ const settings = {
             arrows: false,
           }
         },
+        {
+            breakpoint: 820,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 1600,
+            settings: {
+                slidesToShow: 3,
+            }
+        },
+        {
+            breakpoint: 1800,
+            settings: {
+                slidesToShow: 4,
+            }
+        },
+        {
+            breakpoint: 4900,
+            settings: {
+                slidesToShow: 5,
+            }
+        },
     ]
   };
+
 export const Carousel = ({ contents }: CardListProps) => (
     <CarouselStyled >
         <Slider {...settings}>
             {contents?.map((data: CardProps, i) => (
                 <CardStyled key={`carousel-card-${i}`}>
-                    <CardContent key={`carousel-card-content-${i}`}>
                         <Card {...data} key={`carousel-card-${i}`}/>
-                    </CardContent>
                 </CardStyled>
             ))}
         </Slider>
